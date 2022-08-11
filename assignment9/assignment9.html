@@ -55,21 +55,23 @@
 
         label {
             padding: 10px;
+            color: red;
         }
 
         .personalsDetails input,
-        .personalsDetails select,
-        textarea {
+        .personalsDetails select {
             width: 300px;
             margin: 10px;
             padding: 10px;
             border: 2px solid green;
         }
 
-        textarea {
+        .personalsDetails input[type=message] {
             width: 500px;
             height: 300px;
-            resize: none;
+            padding-top: -40px;
+
+
         }
 
         .personalsDetails input:focus,
@@ -232,7 +234,7 @@
                 <div class="personalDetailHeading">About Yourself</div>
                 <div class="personalsDetails">
                     <label for="textarea" class="about">About Yourself</label>
-                    <textarea></textarea>
+                    <input type="message" placeholder="About Yourself">
 
 
                 </div>
