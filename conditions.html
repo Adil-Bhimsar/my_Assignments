@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+<body>
+    <script>
+        var sName = prompt("Enter Student Name");
+        var sMarks = prompt("Enter Student marks");
+        sMarks = parseInt(sMarks);
+
+        document.write("Student Name is " + sName + "<br>");
+        document.write("Student Marks is " + sMarks + "<br>");
+        if(sMarks >= 40){
+            document.write("Congratulations " + sName + " You have passed the exam");
+        }else{
+            document.write(sName + " You are fail");
+        }
+        
+    </script>
+</body>
+</html>
