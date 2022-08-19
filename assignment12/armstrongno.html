@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var count = 0;
+        var c;
+        var b = 0;
+        var d =0;
+        var e;
+
+        var a = prompt("enter a no");
+        a = parseInt(a);
+        c =a;
+        e = a;
+        while(a!=0){
+          count= count+1;
+          a= a/10;
+          a = parseInt(a);
+        }
+        while(c!=0){
+          b= c%10;
+          b = b**count;
+          c = c/10;
+          c = parseInt(c);
+          d +=b; 
+
+        }
+        if(d == e)
+        document.write("armstrong no");
+        else
+        document.write("not")
+        
+    </script>
+</body>
+</html>
