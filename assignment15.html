@@ -11,21 +11,22 @@
 <body>
     <script>
         function userData() {
-            var eName, eDept, gender, basicSalary,pf, hra, total
+            var eName, eDept, gender, basicSalary,
             eName = prompt("Enter Employee Name");
             eDept = prompt("Enter Employee Department");
             gender = prompt("Enter Your gender");
             basicSalary = prompt("Enter your basic Salary");
             basicSalary = parseInt(basicSalary);
             calculateUserData(basicSalary);
-            getUserdetails(eName, eDept,gender,basicSalary, pf, hra, total);
+            getUserdetails(eName, eDept,gender,basicSalary, total);
         }
 
         function calculateUserData(basicSalary) {
              
-            pf = 14 / 100 * basicSalary;
-            hra = 25 / 100 * basicSalary;
-            total = basicSalary + pf + hra;
+           var pf = 14 / 100 * basicSalary;
+           var hra = 25 / 100 * basicSalary;
+           var total = basicSalary + pf + hra;
+           return total;
             
             
             
