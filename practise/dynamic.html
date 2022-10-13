@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyanmic HTML Practise</title>
+    <Style>
+        h3 {
+            border-radius: 3px;
+            background-color: black;
+            text-align: center;
+            padding: 5px;
+            color: white;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: green;
+        }
+    </Style>
+</head>
+
+<body>
+    <h3>Dyanmic HTML</h3>
+    <div class="container"></div>
+
+    <script>
+        var navbar = {
+            HOME: "HOME",
+            CONTACT: "CONTACT",
+            ABOUT: "ABOUT",
+            GALLERY: "GALLERY",
+            SERVICES: "SERVICES"
+        }
+
+
+        var ul = document.createElement("ul");
+        ul.setAttribute("class", "lists");
+        for (var i = 1; i <= 5; i++) {
+            var li = document.createElement("li");
+            var anchor = document.createElement("a");
+            anchor.setAttribute("href", "#");
+            li.append(anchor);
+
+            if (i == 1) {
+                anchor.innerText = navbar.HOME;
+            } else if (i == 2) {
+                anchor.innerText = navbar.CONTACT;
+            } else if (i == 3) {
+                anchor.innerText = navbar.ABOUT;
+            } else if (i == 4) {
+                anchor.innerText = navbar.GALLERY;
+            } else if (i == 5) {
+                anchor.innerText = navbar.SERVICES;
+            }
+
+            ul.append(li);
+        }
+
+
+        document.querySelector(".container").append(ul);
+        console.log(ul)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emp Details Object Functions</title>
+</head>
+
+<body>
+    <script>
+        var empDetails = {
+            readEmpData: function () {
+                this.name = prompt("Enter Your name");
+                this.age = prompt("Emter Your Age");
+                this.gender = prompt("Enter Your Gender");
+                this.basicSal = prompt("Enter Your Salary");
+                this.basicSal = parseInt(this.basicSal);
+                this.getPFandHRA();
+            },
+
+            getPFandHRA: function () {
+                this.pf = 12 / 100 * this.basicSal;
+                this.hra = 25 / 100 * this.basicSal;
+                this.totalSal = this.pf + this.hra + this.basicSal;
+                this.getTotalTax();
+            },
+            getTotalTax: function () {
+                this.taxPercent = 0;
+                if (this.gender == "male") {
+                    if (this.totalSal >= 500000) {
+                        this.taxPercent = 15;
+                    } else if (this.totalSal >= 300000) {
+                        this.taxPercent = 10;
+                    } else if (this.totalSal = 100000) {
+                        this.taxPercent = 5;
+                    } 
+
+                }else {
+                        if (this.totalSal >= 500000) {
+                            this.taxPercent = 10;
+                        } else if (this.totalSal >= 300000) {
+                            this.taxPercent = 5;
+                        }
+                    }
+                this.taxToBePaid = (this.taxPercent * this.totalSal) / 100 ;
+                this.totalSal = this.totalSal - this.taxToBePaid;
+                this.displayDetails();
+            },
+            displayDetails: function () {
+                for (var temp in empDetails) {
+                    if (typeof (empDetails[temp]) != "function") {
+                        document.write(temp + " : " + empDetails[temp] + "<br>");
+                    }
+                }
+            }
+
+        };
+        empDetails.readEmpData();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foreach find filter map </title>
+</head>
+<body>
+    <script>
+        var arr = [5,7,9,10,11,20];
+        var total = 0;
+
+        arr.forEach((value, index) => {
+            total += value;
+            document.write( total +"<br>")
+
+        });
+
+        arr.find((value) => {
+            if(value == 20){
+                document.write("value is found" + "<br>")
+            }
+        })
+
+        arr.filter((value) => {
+            if(value % 2 == 0){
+                document.write(value + "<br>") 
+            }
+        })
+
+        var temp = arr.map((value) => {
+            return value * 2;
+            
+        })
+        document.write(temp + "<br>")
+    </script>
+    
+</body>
+</html>

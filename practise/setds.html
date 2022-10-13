@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set ds </title>
+</head>
+<body>
+    <script>
+        var arr = new Set()
+        arr.add(55).add(99).add(66)
+        console.log(arr)
+        console.log(arr.size)
+        console.log(arr.has(99))
+        console.log(arr.values())
+        arr.delete(55)
+        console.log(arr) 
+        arr.add(101)
+        for(value of arr){
+            console.log(value)
+        }
+
+    </script>
+    
+</body>
+</html>

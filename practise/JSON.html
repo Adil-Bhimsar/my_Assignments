@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Objects</title>
+</head>
+<body>
+    <script>
+        var empDetaills = {
+            empName : "Rahul",
+            empAge : 20,
+            empDepartment : "IT",
+            empContact : {
+                Home : 123,
+                office : 456
+            }
+        };
+        for(var temp in empDetaills){
+            
+            if(typeof(empDetaills[temp]) == "object"){
+            for(var tempkey in empDetaills[temp])
+            
+                document.write(tempkey + " " + empDetaills[temp][tempkey]  + "<br>");
+            }else{
+                document.write(temp + " " + empDetaills[temp]  + "<br>");
+            }
+        }
+    </script>
+    
+</body>
+</html>

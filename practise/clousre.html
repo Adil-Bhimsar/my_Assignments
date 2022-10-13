@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clousre practise</title>
+    <style>
+        ul {
+            margin: 20px auto;
+            border: 1px solid red;
+            list-style: none;
+            width: 500px;
+        }
+
+        ul h5 {
+            color: red;
+            text-align: center;
+        }
+
+        ul .userInput {
+            margin: 20px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        ul .btn {
+            margin: 10px;
+        }
+
+        .result {
+
+
+            display: none;
+            margin: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <h5>Calulate Data</h5>
+        <li class="userInput">
+            first value:<input type="text" id="firstval">
+        </li>
+        <li class="userInput">
+            second value:<input type="text" id="secondval">
+        </li>
+        <li class="btn">
+            <input type="button" value="addation" id="addation">
+            <input type="button" value="subtraction" id="subtraction">
+            <input type="button" value="multiplication" id="multiply">
+            <input type="button" value="division" id="divide">
+        </li>
+        <li class="result">
+            <p>The <span id="opration"></span> of number is <span id="res"></span></p>
+        </li>
+    </ul>
+
+    <script>
+      (() => {
+
+      
+
+        var getCalculate = (oprType) => {
+            var firstval = document.querySelector("#firstval").value;
+
+            var secondval = document.querySelector("#secondval").value;
+            firstval = parseInt(firstval);
+            secondval = parseInt(secondval);
+
+
+
+            var result;
+
+            switch (oprType) {
+                case "add":
+
+                    result = firstval + secondval;
+
+
+                    break;
+                case "sub":
+
+                    result = firstval - secondval;
+
+
+                    break;
+                case "mul":
+
+                    result = firstval * secondval;
+
+
+                    break;
+                case "div":
+
+                    result = firstval / secondval;
+
+
+                    break;
+            }
+            document.querySelector("#opration").innerText = oprType;
+            document.querySelector("#res").innerText = result;
+            document.querySelector(".result").style.display = "block";
+            document.querySelector(".result").style.border = "1px solid black";
+
+        }
+        document.querySelector("#addation").addEventListener("click", () => {
+            getCalculate("add")
+        });
+        document.querySelector("#subtraction").addEventListener("click", () => {
+            getCalculate("sub")
+        });
+        document.querySelector("#multiply").addEventListener("click", () => {
+            getCalculate("mul")
+        });
+        document.querySelector("#divide").addEventListener("click", () => {
+            getCalculate("div")
+        });
+    })()
+    </script>
+
+</body>
+
+</html>
