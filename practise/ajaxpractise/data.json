@@ -1,0 +1,40 @@
+{
+    "pDataDetails": [
+        {
+            "name": "laptop",
+            "price": 45000,
+            "manfracture": "sony",
+            "rating": 4,
+            "image": "https://www.reliancedigital.in/medias/Lenovo-93IN-Laptops-492573925-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wxMDYyNHxpbWFnZS9qcGVnfGltYWdlcy9oMzcvaDBjLzk4NDk0NzE2OTY5MjYuanBnfDMyZDBmZmY4YmZlYWYyYjY5MjhlZDllZGFmNjUzMDFhZjQwMWYxM2VhOGM3NDQxOWNhZGUyZjZjOTAwYTNmYmQ"
+        },
+        {
+            "name": "Pen Drive",
+            "price": 800,
+            "manfracture": "HP",
+            "rating": 3.5,
+            "image": "https://5.imimg.com/data5/NA/ET/MY-28146307/pendrive-sandisk-cruzer-blade-64gb-5-yrs-warranty-500x500.jpg"
+        },
+        {
+            "name": "shoes",
+            "price": 900,
+            "manfracture": "Adidaas",
+            "rating": 4.5,
+            "image": "https://m.media-amazon.com/images/I/71D9ImsvEtL._UY500_.jpg"
+        },
+        
+        {
+            "name": "shirts",
+            "price": 500,
+            "manfracture": "Raymond",
+            "rating": 4.5,
+            "image": "https://5.imimg.com/data5/YJ/BO/MY-10973479/mens-designer-casual-shirt-500x500.jpg"
+        },
+        {
+            "name": "speakers",
+            "price": 5000,
+            "manfracture": "Boat",
+            "rating": 4.5,
+            "image": "https://in.yamaha.com/en/files/msp3a-qtr-left_354f3ea1b1e240f09c4d638fd6cb483f.jpg?impolicy=resize&imwid=396&imhei=396"
+        }
+    ]
+}
